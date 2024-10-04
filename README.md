@@ -87,3 +87,10 @@ In the links below you can find 2 videos that showcase how Agents from Experimen
 You can also read [my article on Deep Learning on Medium](https://medium.com/@stavrosnik4k/τι-είναι-η-βαθιά-ενισχυτική-μάθηση-792389f81bbf) where I use this project to explain it better to non Computer Science people. Currently, it's only available in Greek, but you can use an auto-translation tool to read it. 
 
 ## Bibliografic References
+[1] Mark Towers et al. “Gymnasium”. In: (Mar. 2023).
+
+[2] M. G. Bellemare et al. “The Arcade Learning Environment: An Evaluation Platform for General Agents”. In: Journal of Artificial Intelligence Research 47 (June 2013), pp. 253–279.
+
+[3] Ziyun Wang et al. “Dueling Network Architectures for Deep Reinforcement Learning”. In: International Conference on Machine Learning. 2015. Url: https://api.semanticscholar.org/CorpusID:5389801 
+
+[4] H. V. Hasselt, Arthur Guez, and David Silver. “Deep Reinforcement Learning with Double Q-Learning”. In: AAAI Conference on Artificial Intelligence. 2015. url: https://api.semanticscholar.org/CorpusID:5389801 
