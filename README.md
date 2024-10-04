@@ -1,5 +1,3 @@
-
-
 # AI Agent that learns to play Space Invaders
 This was a Deep Learning project for the "NDM-08-02 - Computetional Intelligence - Deep Reinforcement Learning" class of School of Informatics of AUTh.
 
