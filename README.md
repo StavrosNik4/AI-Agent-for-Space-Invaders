@@ -1,3 +1,5 @@
+
+
 # AI Agent that learns to play Space Invaders
 This was a Deep Learning project for the "NDM-08-02 - Computetional Intelligence - Deep Reinforcement Learning" class of School of Informatics of AUTh.
 
@@ -82,6 +84,6 @@ In the links below you can find 2 videos that showcase how Agents from Experimen
 <li> Experiment_4: https://youtu.be/A-5bzvdXvkU </li>
 
 ## Medium Article
-You can also read [my article on Deep Learning on Medium](https://medium.com/@stavrosnik4k/τι-είναι-η-βαθιά-ενισχυτική-μάθηση-792389f81bbf) where I use this project to explain it better to non Computer Science people.
+You can also read [my article on Deep Learning on Medium](https://medium.com/@stavrosnik4k/τι-είναι-η-βαθιά-ενισχυτική-μάθηση-792389f81bbf) where I use this project to explain it better to non Computer Science people. Currently, it's only available in Greek, but you can use an auto-translation tool to read it. 
 
 ## Bibliografic References
