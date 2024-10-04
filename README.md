@@ -1,5 +1,5 @@
 # AI Agent that learns to play Space Invaders
-This was a Deep Learning project for the "Computetional Intelligence - Deep Reinforcement Learning" class of School of Informatics of AUTh.
+This was a Deep Learning project for the "NDM-08-02 - Computetional Intelligence - Deep Reinforcement Learning" class of School of Informatics of AUTh.
 
 In this project you will find a Deep Q-Learning Algorithm Implementation and all the code for the experiments I ran.
 
@@ -12,8 +12,9 @@ The requirements.txt file can be used to install all the important Python packag
 For each experiment there is a .py file with already set parameters. 
 
 ### Game State Preprocess
-
-
+<p align="center">
+<img src="https://github.com/StavrosNik4/AI-Agent-for-Space-Invaders/blob/6f868e6783945cfbc9a3c15ee836c900481148a4/images/Figure_1.png" width="500px">
+</p>
 
 The Game State is the 210x160 screenshot of the game's current frame. I grayscale, crop, normalize and downscale it to a 84x84 image.
 
@@ -21,16 +22,27 @@ The Game State is the 210x160 screenshot of the game's current frame. I grayscal
 I use PyTorch to define and manage the architectures of the Neural Networks. I used 2 kinds of architectures for this project. I wanted to check if the second one was indeed better for this kind of problem as stated in the scientific papers I read. For both kinds of networks the input layer is the 4 last preprocessed images of the game state while the output is a list of 6 numbers (as many as the option the agent have).
 
 #### Convolutional Neural Network (CNN)
+<p align="center">
+<img src="https://github.com/StavrosNik4/AI-Agent-for-Space-Invaders/blob/6f868e6783945cfbc9a3c15ee836c900481148a4/images/Figure_2.png" width="500px">
+</p>
 
-As you can see in the image, we use 2 Convolutional Layers and 1 Fully Connected.
+As you can see in the image, I use 2 Convolutional Layers and 1 Fully Connected one before the output layer.
 
 #### Dueling Network
+<p align="center">
+<img src="https://github.com/StavrosNik4/AI-Agent-for-Space-Invaders/blob/6f868e6783945cfbc9a3c15ee836c900481148a4/images/Figure_3.png" width="500px">
+</p>
 
-
-The only difference from a CNN is that we use 2 parallel Fully Connected layers instead of one.  
+The only difference from the CNN is that I use 2 parallel Fully Connected layers (streams) instead of one. One is a Value Layer and the other is an Advantage Layer. I aggregate those 2 layers on the output layer. This architecture tends to have better results and that's why I choose to choose this one after the 2 first expirements where I compare the 2 architectures.
 
 ### Deep Q-Learning Algorithm Implementation
-I implemented the Deep Q-Learning Algorithm using 2 Neural Networks, a main and a target one.
+I implemented the Deep Q-Learning Algorithm using 2 Neural Networks, a main and a target one with epsilon-greedy policy.
+
+### Memory
+
+#### Simple Memory
+
+#### Prioritized Experience Replay
 
 ### Training
 If you want to train one of the models I implemented on your own (or maybe you want to edit one of those and try it out), you can edit the code of the .py file to change some parameters. 
@@ -40,6 +52,10 @@ If you want to train one of the models I implemented on your own (or maybe you w
 
 ### Saliency Maps
 In `saliency_maps.py` file you can find...
+
+<p align="center">
+<img src="https://github.com/StavrosNik4/AI-Agent-for-Space-Invaders/blob/6f868e6783945cfbc9a3c15ee836c900481148a4/images/Figure_11.png" width="500px">
+</p>
 
 ## Saved Models
 Models from all experiments can be found in the Saved Models folder in .pth format. Each model name is as follows:
