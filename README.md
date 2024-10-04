@@ -56,10 +56,10 @@ This is a better memory implementation where I use a smarter way to save and sam
 If you want to train one of the models I implemented on your own (or maybe you want to edit one of those and try it out), you can edit the code of the .py file to change some parameters. 
 
 ### Testing
-If you want to test one of the Saved Models 
+If you want to test one of the Saved Models simply change the TRAINING boolean to False and change the `num_episodes_model` variable to choose the saved model you want.
 
 ### Saliency Maps
-In `saliency_maps.py` file you can find...
+In `saliency_maps.py` file I load a model, I let it play and I plot the Saliency Maps to see which parts of the input are more important for the decision making process of the agent.
 
 <p align="center">
 <img src="https://github.com/StavrosNik4/AI-Agent-for-Space-Invaders/blob/6f868e6783945cfbc9a3c15ee836c900481148a4/images/Figure_11.png" width="500px">
