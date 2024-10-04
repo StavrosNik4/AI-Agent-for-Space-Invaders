@@ -34,6 +34,10 @@ If you want to train one of the models I implemented on your own (or maybe you w
 
 ### Testing
 
+
+### Saliency Maps
+In `saliency_maps.py` file you can find...
+
 ## Saved Models
 Models from all experiments can be found in the Saved Models folder in .pth format. Each model name is as follows:
 
