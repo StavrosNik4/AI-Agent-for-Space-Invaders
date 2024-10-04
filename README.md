@@ -11,6 +11,10 @@ The requirements.txt file can be used to install all the important Python packag
 ## Code
 For each experiment there is a .py file with already set parameters. 
 
+### Enviroment
+
+I use the Farama Foundation **Gymnasium** Python Package to manage the enviroment of the game.
+
 ### Game State Preprocess
 <p align="center">
 <img src="https://github.com/StavrosNik4/AI-Agent-for-Space-Invaders/blob/6f868e6783945cfbc9a3c15ee836c900481148a4/images/Figure_1.png" width="500px">
@@ -19,7 +23,7 @@ For each experiment there is a .py file with already set parameters.
 The Game State is the 210x160 screenshot of the game's current frame. I grayscale, crop, normalize and downscale it to a 84x84 image.
 
 ### Neural Network Architectures Used
-I use PyTorch to define and manage the architectures of the Neural Networks. I used 2 kinds of architectures for this project. I wanted to check if the second one was indeed better for this kind of problem as stated in the scientific papers I read. For both kinds of networks the input layer is the 4 last preprocessed images of the game state while the output is a list of 6 numbers (as many as the option the agent have).
+I use PyTorch to define and manage the architectures of the Neural Networks. I used 2 kinds of architectures for this project. I wanted to check if the second one was indeed better for this kind of problem as stated in the scientific papers I read. For both kinds of networks the input layer is the 4 last preprocessed images of the game state while the output is a list of 6 numbers (as many as the option the agent has for the game).
 
 #### Convolutional Neural Network (CNN)
 <p align="center">
@@ -33,22 +37,26 @@ As you can see in the image, I use 2 Convolutional Layers and 1 Fully Connected 
 <img src="https://github.com/StavrosNik4/AI-Agent-for-Space-Invaders/blob/6f868e6783945cfbc9a3c15ee836c900481148a4/images/Figure_3.png" width="500px">
 </p>
 
-The only difference from the CNN is that I use 2 parallel Fully Connected layers (streams) instead of one. One is a Value Layer and the other is an Advantage Layer. I aggregate those 2 layers on the output layer. This architecture tends to have better results and that's why I choose to choose this one after the 2 first expirements where I compare the 2 architectures.
+The only difference from the CNN is that I use 2 parallel Fully Connected layers (streams) instead of one. One is a Value Layer and the other is an Advantage Layer. I aggregate those 2 layers on the output layer. This architecture tends to have better results and that's why I choose to use this one after the 2 first expirements where I compared the 2 architectures.
 
 ### Deep Q-Learning Algorithm Implementation
-I implemented the Deep Q-Learning Algorithm using 2 Neural Networks, a main and a target one with epsilon-greedy policy.
+I implemented the Deep Q-Learning Algorithm using 2 Neural Networks, a main and a target one. I'm also using epsilon-greedy policy.
 
 ### Memory
 
+I implemented 2 different kinds of memory to save experiences that will help the agent during the training.
+
 #### Simple Memory
+This is just a simple queue where I save recent experiences and I sample a mini-batch when I need some of them. It is used on Expirements 1 and 2.
 
 #### Prioritized Experience Replay
+This is a better memory implementation where I use a smarter way to save and sample experiences using their TD-error. Experiences with higher TD-error tend to be more usefull for the training process, but we also need to use those ones with lower TD-error as well. That's why I use a Sum Tree Data Structure to implement this kind of memory. It is used on Expirements 3 and 4.
 
 ### Training
 If you want to train one of the models I implemented on your own (or maybe you want to edit one of those and try it out), you can edit the code of the .py file to change some parameters. 
 
 ### Testing
-
+If you want to test one of the Saved Models 
 
 ### Saliency Maps
 In `saliency_maps.py` file you can find...
