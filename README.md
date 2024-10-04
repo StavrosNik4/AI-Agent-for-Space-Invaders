@@ -4,7 +4,7 @@ This was a Deep Learning project for the "Computetional Intelligence - Deep Rein
 In this project you will find a Deep Q-Learning Algorithm Implementation and all the code for the experiments I ran.
 
 ## Requirements
-The requirements.txt file can be used to install all the important Python packages for this project if you want to run the code.
+The requirements.txt file can be used to install all the important Python packages for this project if you want to run the code. Use this command:
 
 `pip install requirements.txt`
 
@@ -13,11 +13,14 @@ For each experiment there is a .py file with already set parameters.
 
 ### Game State Preprocess
 
+
+
+The Game State is the 210x160 screenshot of the game's current frame. I grayscale, crop, normalize and downscale it to a 84x84 image.
+
 ### Neural Network Architectures Used
-I use PyTorch to define and manage the architectures of the Neural Networks. I used 2 kinds of architectures for this project. I wanted to check if the second one was indeed better for this kind of problem as stated in the scientific papers I read. For both kinds of networks the input layer is the 4 last preprocessed images of the game state while the output is
+I use PyTorch to define and manage the architectures of the Neural Networks. I used 2 kinds of architectures for this project. I wanted to check if the second one was indeed better for this kind of problem as stated in the scientific papers I read. For both kinds of networks the input layer is the 4 last preprocessed images of the game state while the output is a list of 6 numbers (as many as the option the agent have).
 
 #### Convolutional Neural Network (CNN)
-
 
 As you can see in the image, we use 2 Convolutional Layers and 1 Fully Connected.
 
